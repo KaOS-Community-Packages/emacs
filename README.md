@@ -1,0 +1,4 @@
+emacs
+=====
+
+The extensible, customizable, self-documenting real-time display editor
