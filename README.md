@@ -3,4 +3,13 @@ emacs
 
 The extensible, customizable, self-documenting real-time display editor.
 
-Depends on [m17n-db](https://github.com/KaOS-Community-Packages/m17n-db), [m17n-lib](https://github.com/KaOS-Community-Packages/m17n-lib) and [libotf](https://github.com/KaOS-Community-Packages/libotf).
+http://www.gnu.org/software/emacs/
+
+Needed packages from KCP:
+Download and run `makepkg -si` in the package directory (with Dolphin and F4):
+
+[m17n-db](../../../m17n-db)
+
+[m17n-lib](../../../m17n-lib)
+
+[libotf](../../../libotf)
