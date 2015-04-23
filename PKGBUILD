@@ -1,5 +1,5 @@
 pkgname=emacs
-pkgver=24.4
+pkgver=24.5
 pkgrel=1
 pkgdesc="The extensible, customizable, self-documenting real-time display editor"
 arch=('x86_64')
@@ -7,9 +7,8 @@ url="http://www.gnu.org/software/emacs/emacs.html"
 license=('GPL3')
 depends=('librsvg' 'gpm' 'giflib' 'libxpm' 'libotf' 'm17n-lib' 'gtk3' 'hicolor-icon-theme' 'gconf' 'desktop-file-utils' 'alsa-lib' 'imagemagick' 'gnutls' 'gnutls')
 install=emacs.install
-source=(ftp://ftp.gnu.org/gnu/emacs/$pkgname-$pkgver.tar.xz{,.sig})
-md5sums=('ad487658ad7421ad8d7b5152192eb945'
-         'SKIP')
+source=(ftp://ftp.gnu.org/gnu/emacs/$pkgname-$pkgver.tar.xz)
+md5sums=('50560ee00bac9bb9cf0e822764cd0832')
 
 build() {
   cd "$srcdir"/$pkgname-$pkgver
@@ -29,7 +28,7 @@ package() {
   rm "$pkgdir"/usr/share/info/info.info.gz
   # fix user/root permissions on usr/share files
   find "$pkgdir"/usr/share/emacs/$pkgver -exec chown root:root {} \;
-  # fix perms on /var/games
+  # fix permissions on /var/games
   chmod 775 "$pkgdir"/var/games
   chmod 775 "$pkgdir"/var/games/emacs
   chmod 664 "$pkgdir"/var/games/emacs/*
